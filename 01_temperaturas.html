@@ -10,9 +10,19 @@
     */
 
     //ENTRADA
+    const graus = Number(prompt(`Qual a temperatura em graus Celsius?`));
 
 
     //PROCESSAMENTO
+    if (graus < 100) {
+        document.write(`Está muito baixa!`)
+    } else if (graus > 100 && graus <= 200) {
+        document.write(`Está baixa!`)
+    } else if (graus > 200 && graus < 500) {
+        document.write(`Está normal!`)
+    } else {
+        document.write(`Está muito alta!`)
+    };
 
     
     //SAÍDA
