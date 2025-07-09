@@ -19,24 +19,29 @@
 
     //PROCESSAMENTO
     let aumento
+    let aumentoReais
     let salarioNovo
 
     if (salario <= 2000.00) {
         aumento = `15%`;
         salarioNovo = salario + (salario * 0.15);
+        aumentoReais = salarioNovo - salario
     } else if (salario > 2000.00 && salario < 4000.00) {
         aumento = `10%`;
         salarioNovo = salario + (salario * 0.1);
+        aumentoReais = salarioNovo - salario
     } else if (salario >= 4000.00 && salario < 7000.00) {
         aumento = `7,5%`;
         salarioNovo = (salario * 7.5) / 100;
+        aumentoReais = salarioNovo - salario
     } else {
         aumento = `5%`;
         salarioNovo = salario + (salario * 0.05);
+        aumentoReais = salarioNovo - salario
     }
 
     
     //SAÍDA
-    document.write(`Seu novo salário é de ${salarioNovo}, ele aumentou ${aumento}.`);
+    document.write(`Seu novo salário é de ${salarioNovo}, ele aumentou R$${aumentoReais}.`);
 
 </script>
