@@ -10,9 +10,21 @@
     */
 
     //ENTRADA
+    const valorImovel = Number(prompt(`Qual é o valor do imóvel?`));
+    const anos = Number(prompt(`Em quantos anos será realizado o financiamento?`));
+    const salario = Number(prompt(`Qual é o seu salário?`));
 
 
     //PROCESSAMENTO
+    let meses = anos * 12;
+    let prestacao = valorImovel / meses;
+    let porcentagem = (salario * 30) / 100;
+
+    if (prestacao < porcentagem) {
+        document.write(`O financiamento poderá ser feito, ficando R$${prestacao}!`)
+    } else {
+        document.write(`O financiamento não poderá ser feito, ficando R$${prestacao}`)
+    };
 
     
     //SAÍDA

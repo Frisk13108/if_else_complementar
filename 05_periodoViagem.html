@@ -11,9 +11,22 @@
     */
 
     //ENTRADA
+    const distancia = Number(prompt(`Qual a distância da viagem? (em quilômetros)`));
+    const kmDia = Number(prompt(`Quantos quilômetros pretende viajar por dia?`));
 
 
     //PROCESSAMENTO
+    let dias = Math.round(distancia / kmDia);
+
+    if (dias <= 3) {
+        document.write(`Sua viagem poderá ser realizada em qualquer período. A viagem durará ${dias} dias.`);
+    } else if (dias > 3 && dias <= 10) {
+        document.write(`Sua viagem poderá ser realizada nas férias de julho. A viagem durará ${dias} dias.`);
+    } else if (dias > 10 && dias <= 20) {
+        document.write(`Sua viagem poderá ser realizada nas férias de verão. A viagem durará ${dias} dias.`);
+    } else {
+        document.write(`Deverá trabalhar remotamente. A viagem durará ${dias} dias.`);
+    }
 
     
     //SAÍDA

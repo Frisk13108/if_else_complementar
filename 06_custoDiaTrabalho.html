@@ -15,9 +15,22 @@
     */
 
     //ENTRADA
+    const viagensDia = Number(prompt(`Quantas viagens você realiza por dia?`));
+    const cargo = Number(prompt(`Qual o cargo que você ocupa? (Motorista ou Cobrador)`));
 
 
     //PROCESSAMENTO
+    if ((cargo == `Motorista` || cargo == `motorista`) && viagensDia <= 10) {
+        document.write(`Seu cargo é ser motorista e seu novo salário é de R$120!`);
+    } else if ((cargo == `Motorista` || cargo == `motorista`) && viagensDia > 10) {
+        document.write(`Seu cargo é ser motorista e seu novo salário é de R$135!`)
+    } else if ((cargo == `Cobrador` || cargo == `cobrador`) && viagensDia <= 10) {
+        document.write(`Seu cargo é ser cobrador e seu salário permanece de R$100!`)
+    } else if ((cargo == `Cobrador` || cargo == `cobrador`) && viagensDia > 10) {
+        document.write(`Seu cargo é ser cobrador e seu novo salário é de R$110!`)
+    } else {
+        document.write(`Dados inválidos!`)
+    }
 
     
     //SAÍDA
